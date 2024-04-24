@@ -14,7 +14,8 @@ namespace STRMDotNetCore.ConsoleApp
             DataSource = "DESKTOP-J9BO0AP\\MSSQL2019",
             InitialCatalog = "STMDB",
             UserID = "sa",
-            Password = "123@ace.com"
+            Password = "123@ace.com",
+            TrustServerCertificate=true
         };
     }
 }
