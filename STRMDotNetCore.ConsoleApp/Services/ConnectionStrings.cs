@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace STRMDotNetCore.ConsoleApp
+namespace STRMDotNetCore.ConsoleApp.Services
 {
     internal class ConnectionStrings
     {
@@ -15,7 +15,7 @@ namespace STRMDotNetCore.ConsoleApp
             InitialCatalog = "STMDB",
             UserID = "sa",
             Password = "123@ace.com",
-            TrustServerCertificate=true
+            TrustServerCertificate = true
         };
     }
 }

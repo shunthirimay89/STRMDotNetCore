@@ -1,5 +1,6 @@
 ﻿// See https://aka.ms/new-console-template for more information
-using STRMDotNetCore.ConsoleApp;
+using STRMDotNetCore.ConsoleApp.AdoDotNetExamples;
+using STRMDotNetCore.ConsoleApp.EFCoreExamples;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Data;
 using System.Data.SqlClient;

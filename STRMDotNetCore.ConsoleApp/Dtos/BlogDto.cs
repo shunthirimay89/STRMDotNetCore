@@ -7,9 +7,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Threading.Tasks.Sources;
 
-namespace STRMDotNetCore.ConsoleApp;
+namespace STRMDotNetCore.ConsoleApp.Dtos;
 
-[Table ("Tbl_Blog")]
+[Table("Tbl_Blog")]
 public class BlogDto
 {
     [Key]

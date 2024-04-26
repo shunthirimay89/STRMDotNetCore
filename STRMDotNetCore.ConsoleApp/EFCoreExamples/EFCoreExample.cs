@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using STRMDotNetCore.ConsoleApp.Dtos;
 
-namespace STRMDotNetCore.ConsoleApp
+namespace STRMDotNetCore.ConsoleApp.EFCoreExamples
 {
     internal class EFCoreExample
     {
         private readonly AppDbContext db = new AppDbContext();
-        public void Run() 
+        public void Run()
         {
             // Read();
             // Edit(2);
@@ -17,14 +18,14 @@ namespace STRMDotNetCore.ConsoleApp
             //Create("Author New", "Title New", "Content New");
             //Update(3, "Author 3", "Title 3", "Content 3");
             Delete(1003);
-            
+
         }
 
 
-        private void Read() 
+        private void Read()
         {
-            
-             var list =db.blogs.ToList();
+
+            var list = db.blogs.ToList();
 
             foreach (BlogDto item in list)
             {
@@ -36,11 +37,11 @@ namespace STRMDotNetCore.ConsoleApp
             }
         }
 
-        private void Edit(int id) 
+        private void Edit(int id)
         {
-            var item =db.blogs.FirstOrDefault(x => x.BlogId == id);
+            var item = db.blogs.FirstOrDefault(x => x.BlogId == id);
 
-            if (item is null) 
+            if (item is null)
             {
                 Console.WriteLine("No DataFound");
                 return;
@@ -54,7 +55,7 @@ namespace STRMDotNetCore.ConsoleApp
 
         }
 
-        private void Create(string author, string title, string content) 
+        private void Create(string author, string title, string content)
         {
             var item = new BlogDto
             {
@@ -63,13 +64,13 @@ namespace STRMDotNetCore.ConsoleApp
                 BlogContent = content
             };
             db.Add(item);
-            int result =db.SaveChanges();
+            int result = db.SaveChanges();
             string message = result > 0 ? "saving successful" : "saving fail";
             Console.WriteLine(message);
         }
 
 
-        private void Update(int id, string author, string title, string content) 
+        private void Update(int id, string author, string title, string content)
         {
             var item = db.blogs.FirstOrDefault(x => x.BlogId == id);
 
@@ -82,13 +83,13 @@ namespace STRMDotNetCore.ConsoleApp
             item.BlogAuthor = author;
             item.BlogTitle = title;
             item.BlogContent = content;
-            int result =db.SaveChanges();
+            int result = db.SaveChanges();
             string message = result > 0 ? "Updating successful" : "Updating fail";
             Console.WriteLine(message);
 
         }
 
-        private void Delete(int id) 
+        private void Delete(int id)
         {
 
             var item = db.blogs.FirstOrDefault(x => x.BlogId == id);
@@ -100,7 +101,7 @@ namespace STRMDotNetCore.ConsoleApp
             }
 
             db.Remove(item);
-            int result=  db.SaveChanges();
+            int result = db.SaveChanges();
             string message = result > 0 ? "Deleting successful" : "Deleting fail";
             Console.WriteLine(message);
         }
