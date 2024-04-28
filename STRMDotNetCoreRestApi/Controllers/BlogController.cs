@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
-using STRMDotNetCoreRestApi.Db;
-using STRMDotNetCoreRestApi.Models;
+using STRMDotNetCore.RestApi.Db;
+using STRMDotNetCore.RestApi.Models;
 
-namespace STRMDotNetCoreRestApi.Controllers
+namespace STRMDotNetCore.RestApi.Controllers
 {
     //endPoint
     [Route("api/[controller]")]
@@ -12,30 +12,32 @@ namespace STRMDotNetCoreRestApi.Controllers
     public class BlogController : ControllerBase
 
     {
-        private  readonly AppDbContext _context;
+        private readonly AppDbContext _context;
 
-        public BlogController() {
+        public BlogController()
+        {
 
 
             _context = new AppDbContext();
         }
 
         [HttpGet]
-        public  IActionResult Read() 
+        public IActionResult Read()
 
         {
-            var list =_context.blogs.ToList();
+            var list = _context.blogs.ToList();
             return Ok(list);
         }
 
-        [HttpGet ("{id}")]
+        [HttpGet("{id}")]
         public IActionResult Edit(int id)
 
         {
-            var item = _context.blogs.FirstOrDefault(x=> x.BlogId==id);
-            if (item is null) {
+            var item = _context.blogs.FirstOrDefault(x => x.BlogId == id);
+            if (item is null)
+            {
                 return NotFound("No Data Found");
-            
+
             }
             return Ok(item);
         }
@@ -44,9 +46,9 @@ namespace STRMDotNetCoreRestApi.Controllers
         public IActionResult Create(BlogModel blog)
         {
             _context.blogs.Add(blog);
-         var result=   _context.SaveChanges();
+            var result = _context.SaveChanges();
             string message = result > 0 ? "saving successful" : "saving fail";
-            
+
             return Ok(message);
         }
 
@@ -80,7 +82,8 @@ namespace STRMDotNetCoreRestApi.Controllers
                 return NotFound("No Data Found");
 
             }
-            if (!string.IsNullOrEmpty(blog.BlogAuthor)) {
+            if (!string.IsNullOrEmpty(blog.BlogAuthor))
+            {
 
                 item.BlogAuthor = blog.BlogAuthor;
             }
@@ -97,7 +100,7 @@ namespace STRMDotNetCoreRestApi.Controllers
                 item.BlogContent = blog.BlogContent;
             }
 
-           
+
             var result = _context.SaveChanges();
             string message = result > 0 ? "Updating successful" : "updating fail";
             Console.WriteLine(message);
@@ -123,6 +126,6 @@ namespace STRMDotNetCoreRestApi.Controllers
             return Ok(message);
         }
 
-         
+
     }
 }

@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Identity.Client;
-using STRMDotNetCoreRestApi.Models;
-using STRMDotNetCoreRestApi.Services;
+using STRMDotNetCore.RestApi.Models;
+using STRMDotNetCore.RestApi.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace STRMDotNetCoreRestApi.Db
+namespace STRMDotNetCore.RestApi.Db
 {
     public class AppDbContext : DbContext
     {
