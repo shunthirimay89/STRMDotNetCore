@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace STRMDotNetCore.RestApi.Services
 {
-    internal class ConnectionStrings
+    public class ConnectionStrings
     {
         public static SqlConnectionStringBuilder sqlConnectionStringBuilder = new SqlConnectionStringBuilder()
         {

@@ -5,7 +5,9 @@ using STRMDotNetCore.RestApi.Db;
 using STRMDotNetCore.RestApi.Models;
 
 namespace STRMDotNetCore.RestApi.Controllers
-{
+
+{    
+    
     //endPoint
     [Route("api/[controller]")]
     [ApiController]
@@ -23,7 +25,7 @@ namespace STRMDotNetCore.RestApi.Controllers
 
         [HttpGet]
         public IActionResult Read()
-
+           
         {
             var list = _context.blogs.ToList();
             return Ok(list);
@@ -126,6 +128,6 @@ namespace STRMDotNetCore.RestApi.Controllers
             return Ok(message);
         }
 
-
+ 
     }
 }
