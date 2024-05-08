@@ -13,7 +13,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documents", "Documents", "{
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STRMDotNetCore.RestApi", "STRMDotNetCoreRestApi\STRMDotNetCore.RestApi.csproj", "{1C34BC7B-31B4-44DF-B6AD-313E837194CD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STRMDotNetCore.Shared", "STRMDotNetCore.Shared\STRMDotNetCore.Shared.csproj", "{297C39D9-3735-415A-BA60-9C2DA94F4E22}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STRMDotNetCore.Shared", "STRMDotNetCore.Shared\STRMDotNetCore.Shared.csproj", "{297C39D9-3735-415A-BA60-9C2DA94F4E22}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STRMDotNetCore.RestApiWithNLayer", "STRMDotNetCore.RestApiWithNLayer\STRMDotNetCore.RestApiWithNLayer.csproj", "{81E79C3A-75B9-4E32-BD0E-527D9DD45142}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{297C39D9-3735-415A-BA60-9C2DA94F4E22}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{297C39D9-3735-415A-BA60-9C2DA94F4E22}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{297C39D9-3735-415A-BA60-9C2DA94F4E22}.Release|Any CPU.Build.0 = Release|Any CPU
+		{81E79C3A-75B9-4E32-BD0E-527D9DD45142}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{81E79C3A-75B9-4E32-BD0E-527D9DD45142}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{81E79C3A-75B9-4E32-BD0E-527D9DD45142}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{81E79C3A-75B9-4E32-BD0E-527D9DD45142}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
