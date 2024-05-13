@@ -105,7 +105,7 @@ namespace STRMDotNetCore.RestApi.Controllers
 
             var result = _context.SaveChanges();
             string message = result > 0 ? "Updating successful" : "updating fail";
-            Console.WriteLine(message);
+
             return Ok(message);
         }
 
