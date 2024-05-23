@@ -19,7 +19,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STRMDotNetCore.RestApiWithN
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STRMDotNetCore.ConsoleAppHttpClient", "STRMDotNetCore.ConsoleAppHttpClient\STRMDotNetCore.ConsoleAppHttpClient.csproj", "{D77B1FB3-FE6A-4667-9CD1-A2CF7F55B5B4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STRMDotNetCore.ConsoleAppHttpClientExamples", "STRMDotNetCore.ConsoleAppHttpClientExamples\STRMDotNetCore.ConsoleAppHttpClientExamples.csproj", "{B76947D4-6844-4E26-BEA7-00202C301052}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "STRMDotNetCore.ConsoleAppHttpClientExamples", "STRMDotNetCore.ConsoleAppHttpClientExamples\STRMDotNetCore.ConsoleAppHttpClientExamples.csproj", "{B76947D4-6844-4E26-BEA7-00202C301052}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "STRMDotNetCore.ConsoleAppRestClientExamples", "STRMDotNetCore.ConsoleAppRestClientExamples\STRMDotNetCore.ConsoleAppRestClientExamples.csproj", "{87DB63CD-231C-4981-8060-12B38CC71A9D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{B76947D4-6844-4E26-BEA7-00202C301052}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B76947D4-6844-4E26-BEA7-00202C301052}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B76947D4-6844-4E26-BEA7-00202C301052}.Release|Any CPU.Build.0 = Release|Any CPU
+		{87DB63CD-231C-4981-8060-12B38CC71A9D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87DB63CD-231C-4981-8060-12B38CC71A9D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87DB63CD-231C-4981-8060-12B38CC71A9D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87DB63CD-231C-4981-8060-12B38CC71A9D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
