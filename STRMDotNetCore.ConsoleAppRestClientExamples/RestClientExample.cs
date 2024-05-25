@@ -19,7 +19,7 @@ namespace STRMDotNetCore.ConsoleAppRestClientExamples
             //await EditAsync(1);
             //await EditAsync(100);
             //await CreateAsync("title", "author 2", "content 3");
-            //await UpdateAsync(14, "title 1", "author 2", "content 3");
+            ///*await UpdateAsync(14, "title 1", "author 2", "content 3");*/
             //await EditAsync(14);
             await PatchAsync(1, "title 301", "author 301");
 
